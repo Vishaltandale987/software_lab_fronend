@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react';
-import "./women.css";
+import "./men.css";
 import {
   IconButton,
   Avatar,
@@ -37,7 +37,7 @@ import {
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import axios from 'axios';
-import Women_inventry from './Women_inventry';
+import Man_Inventry from './Man_Inventry';
 
 interface LinkItemProps {
   name: string;
@@ -51,7 +51,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Settings', icon: FiSettings },
 ];
 
-export default function Women({
+export default function Men_Sidebar({
   children,
 }: {
   children: ReactNode;
@@ -66,7 +66,7 @@ export default function Women({
 
     try {
       
-      let res = await axios("http://localhost:8080/products/women")
+      let res = await axios("http://localhost:8080/products/men")
   
       setdata(res.data)
     } catch (error) {
@@ -105,7 +105,7 @@ export default function Women({
 
 
         <div className='inventry_box'>        {data?.map((el, index) => {
-            return <Women_inventry key={index} men_data={el} />;
+            return <Man_Inventry key={index} men_data={el} />;
         })}
         </div>
         

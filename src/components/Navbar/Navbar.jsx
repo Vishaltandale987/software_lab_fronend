@@ -33,8 +33,11 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box bg={useColorModeValue("#DADBDD", "gray.900")} px={4}>
-        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Box bg={useColorModeValue("#DADBDD", "gray.900")} px={4} >
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"} 
+        
+      // pos="fixed"
+      >
           <IconButton
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}

@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Men from '../pages/Men Page/Men';
 import Women from '../pages/Women Page/Women';
 import Man_single_page from '../pages/Men Page/Man_single_page';
+import Women_single_page from '../pages/Women Page/Women_single_page';
 
 function All_Route() {
   return (
@@ -12,6 +13,7 @@ function All_Route() {
       <Route path="/" element={<Home />}></Route>
       <Route path="/man" element={<Men />}></Route>
       <Route path="/manSinglePage" element={<Man_single_page />}></Route>
+      <Route path="/womenSinglePage" element={<Women_single_page />}></Route>
 
       <Route path="/women" element={<Women />}></Route>
       </Routes>
